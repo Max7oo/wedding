@@ -1,10 +1,13 @@
 <template>
   <Menu />
   <Header />
-  <WhenwhereComponent />
-  <TravelInfoComponent />
-  <BeThereComponent />
-  <QaComponent />
+  <div class="container">
+    <WhenwhereComponent />
+    <TravelInfoComponent />
+    <BeThereComponent />
+    <QaComponent />
+  </div>
+  <FooterComponent />
 </template>
 
 <script setup lang="ts">
@@ -14,6 +17,12 @@ import WhenwhereComponent from './assets/components/whenwhereComponent.vue'
 import TravelInfoComponent from './assets/components/travelInfoComponent.vue'
 import BeThereComponent from './assets/components/beThereComponent.vue'
 import QaComponent from './assets/components/qaComponent.vue'
+import FooterComponent from './assets/components/footerComponent.vue'
 </script>
 
-<style scoped></style>
+<style scoped>
+.container {
+  max-width: 2000px;
+  margin: 0 auto;
+}
+</style>

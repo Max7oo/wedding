@@ -1,5 +1,5 @@
 <template>
-  <div class="travelInfo">
+  <div class="travelInfo" id="travelInfo">
     <div class="travelInfoDiv">
       <h2>Travel info</h2>
       <div class="travelInfoColumns">

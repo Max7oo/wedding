@@ -1,5 +1,5 @@
 <template>
-  <div class="beThere">
+  <div class="beThere" id="rsvp">
     <h2>I will be there</h2>
     <p>
       Please fill this form to RSVP with any dietary restrictions. A family group can fill one form
@@ -93,6 +93,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding-bottom: 4rem;
 }
 .formItem {
   display: flex;

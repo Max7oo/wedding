@@ -1,13 +1,13 @@
 <template>
   <div class="headerDiv">
-    <h1>Julie & Max</h1>
+    <h1>Max & Julie</h1>
     <p>
       {{ countdown }}
       <template v-if="countdown !== 'The big day is here!'">
         &nbsp;until the 27th of June, 2026!
       </template>
     </p>
-    <button>I will be there (RSVP)</button>
+    <button href="#" @click.prevent="scrollTo('rsvp')">I will be there (RSVP)</button>
   </div>
 </template>
 
@@ -44,6 +44,20 @@ onMounted(() => {
 onBeforeUnmount(() => {
   clearInterval(interval)
 })
+
+const scrollTo = (id: string) => {
+  const el = document.getElementById(id)
+  if (!el) return
+
+  const headerOffset = 100 // adjust to menu height
+  const elementPosition = el.getBoundingClientRect().top
+  const offsetPosition = elementPosition + window.scrollY - headerOffset
+
+  window.scrollTo({
+    top: offsetPosition,
+    behavior: 'smooth',
+  })
+}
 </script>
 
 <style scoped>
@@ -60,6 +74,7 @@ onBeforeUnmount(() => {
   justify-content: center;
   align-items: center;
   gap: 2rem;
+  padding: 2rem;
 }
 
 .headerDiv::before {

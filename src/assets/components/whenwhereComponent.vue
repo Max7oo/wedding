@@ -1,5 +1,5 @@
 <template>
-  <div class="whenwhereDiv">
+  <div class="whenwhereDiv" id="whenwhere">
     <div class="whenwhereItem">
       <h2>Ceremony</h2>
       <div class="whenwhereItemInfo">
@@ -25,8 +25,8 @@
   display: flex;
   justify-content: space-between;
   width: 60%;
-
-  margin: 6rem auto;
+  gap: 4rem;
+  margin: 4rem auto;
 }
 
 .whenwhereItem {
@@ -41,5 +41,10 @@
   text-align: center;
   gap: 1rem;
   max-width: 300px;
+}
+
+@media (max-width: 1100px) {
+  .whenwhereDiv {
+  }
 }
 </style>
