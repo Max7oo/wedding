@@ -110,4 +110,47 @@
   width: 60%;
   object-fit: cover;
 }
+
+@media (max-width: 1000px) {
+  .travelInfoColumns {
+    flex-direction: column;
+  }
+  .images {
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+  }
+  .images img:nth-child(1) {
+    width: 60%;
+  }
+  .images img:nth-child(2) {
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .images img:nth-child(1) {
+    width: 100%;
+  }
+}
+
+@media (max-width: 500px) {
+  .travelInfo,
+  .travelInfoDiv {
+    padding: 1rem;
+  }
+}
+
+@media (max-width: 379px) {
+  .travelInfo,
+  .travelInfoDiv {
+    padding: 2rem 1rem;
+  }
+  .travelInfoColumns {
+    gap: 2rem;
+  }
+  .images {
+    margin-top: 2rem;
+  }
+}
 </style>

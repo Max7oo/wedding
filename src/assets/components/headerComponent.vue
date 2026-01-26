@@ -88,4 +88,16 @@ const scrollTo = (id: string) => {
   position: relative;
   z-index: 1;
 }
+
+.headerDiv h1,
+.headerDiv h2,
+.headerDiv p {
+  text-align: center;
+}
+
+@media (max-width: 481px) {
+  .headerDiv {
+    padding: 1rem;
+  }
+}
 </style>

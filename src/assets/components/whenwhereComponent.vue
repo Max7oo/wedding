@@ -43,8 +43,25 @@
   max-width: 300px;
 }
 
+@media (max-width: 1320px) {
+  .whenwhereDiv {
+    width: 80%;
+  }
+}
+
 @media (max-width: 1100px) {
   .whenwhereDiv {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media (max-width: 379px) {
+  .whenwhereDiv {
+    margin: 2rem auto;
+  }
+  .whenwhereItem {
+    gap: 1rem;
   }
 }
 </style>

@@ -1,8 +1,8 @@
 <template>
   <div class="qa" id="qa">
+    <h2>Q&A</h2>
     <div class="qaDiv">
       <div class="questions">
-        <h2>Q&A</h2>
         <details open>
           <summary>Can I give you a gift?</summary>
           <p>
@@ -104,5 +104,32 @@
 }
 .image img {
   width: 100%;
+}
+
+@media (max-width: 1100px) {
+  .qaDiv {
+    flex-direction: column;
+    align-items: center;
+  }
+  .questions {
+    max-width: 100%;
+    min-width: 100%;
+  }
+}
+
+@media (max-width: 500px) {
+  .qa {
+    padding: 2rem 2rem 4rem 2rem;
+  }
+}
+
+@media (max-width: 379px) {
+  .qa {
+    padding: 2rem 1rem;
+  }
+  .qaDiv {
+    gap: 2rem;
+    padding-bottom: 0;
+  }
 }
 </style>

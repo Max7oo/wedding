@@ -82,6 +82,9 @@ const scrollTo = (id: string) => {
   border: none;
   cursor: pointer;
 }
+button.burger {
+  padding: 0 0;
+}
 
 /* Burger lines */
 .burger span {

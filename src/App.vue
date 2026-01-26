@@ -4,8 +4,8 @@
   <div class="container">
     <WhenwhereComponent />
     <TravelInfoComponent />
-    <BeThereComponent />
     <QaComponent />
+    <BeThereComponent />
   </div>
   <FooterComponent />
 </template>

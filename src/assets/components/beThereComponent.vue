@@ -13,10 +13,12 @@
 
       <div class="formItem">
         <label for="name">Are you coming?</label>
-        <input type="radio" id="yes" name="rsvp" value="yes" required />
-        <label for="yes">Yes</label>
-        <input type="radio" id="no" name="rsvp" value="no" required />
-        <label for="no">No</label>
+        <div class="radiobuttons">
+          <input type="radio" id="yes" name="rsvp" value="yes" required />
+          <label for="yes">Yes</label>
+          <input type="radio" id="no" name="rsvp" value="no" required />
+          <label for="no">No</label>
+        </div>
       </div>
 
       <div class="formItem">
@@ -38,10 +40,12 @@
 
       <div class="formItem">
         <label for="name">Do you know already your travel details?</label>
-        <input type="radio" id="yes" name="travel" value="yes" required />
-        <label for="yes">Yes</label>
-        <input type="radio" id="no" name="travel" value="no" required />
-        <label for="no">No</label>
+        <div class="radiobuttons">
+          <input type="radio" id="yes" name="travel" value="yes" required />
+          <label for="yes">Yes</label>
+          <input type="radio" id="no" name="travel" value="no" required />
+          <label for="no">No</label>
+        </div>
       </div>
 
       <div class="formItem">
@@ -53,10 +57,12 @@
 
       <div class="formItem">
         <label for="name">Are you interested in the taxi?</label>
-        <input type="radio" id="yes" name="taxi" value="yes" required />
-        <label for="yes">Yes</label>
-        <input type="radio" id="no" name="taxi" value="no" required />
-        <label for="no">No</label>
+        <div class="radiobuttons">
+          <input type="radio" id="yes" name="taxi" value="yes" required />
+          <label for="yes">Yes</label>
+          <input type="radio" id="no" name="taxi" value="no" required />
+          <label for="no">No</label>
+        </div>
       </div>
 
       <div class="formItem">
@@ -93,7 +99,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-bottom: 4rem;
+  margin-bottom: 4rem;
 }
 .formItem {
   display: flex;
@@ -106,5 +112,28 @@
   font-size: 1.5rem;
 
   border: #a0ba9f 2px solid;
+}
+
+.radiobuttons {
+  display: flex;
+}
+
+@media (max-width: 768px) {
+  .formItem {
+    flex-direction: column;
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 500px) {
+  .beThere {
+    padding: 2rem;
+  }
+}
+
+@media (max-width: 379px) {
+  .beThere {
+    padding: 2rem 1rem;
+  }
 }
 </style>
