@@ -27,6 +27,9 @@ See [Vite Configuration Reference](https://vite.dev/config/).
 
 ```sh
 npm install
+composer install
+start xampp
+update demo variables in contact.php
 ```
 
 ### Compile and Hot-Reload for Development

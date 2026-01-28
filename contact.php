@@ -1,4 +1,16 @@
 <?php
+
+use Symfony\Component\Mailer\Mailer;
+use Symfony\Component\Mailer\Transport;
+use Symfony\Component\Mime\Email;
+
+require __DIR__ . '/vendor/autoload.php';
+
+// Create transport from DSN
+$dsn = 'smtp://test@test.nl:password@mail.axc.nl:465'; //change email and password
+$transport = Transport::fromDsn($dsn);
+$mailer = new Mailer($transport);
+
 // Enable error reporting for debugging
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
@@ -74,7 +86,7 @@ if (!empty($errors)) {
 }
 
 // Configure email settings
-$to = 'm.j.deruiter99@hotmail.com'; // CHANGE THIS to your email
+$to = 'test@test.nl'; // CHANGE THIS to your email
 $email_subject = "RSVP Response from " . $name;
 
 // Create email body
@@ -105,15 +117,17 @@ if (!empty($song)) {
     $email_body .= "\nSong Request: $song\n";
 }
 
-// Email headers
-$headers = "From: $name\n";
-$headers .= "Reply-To: $name\n";
-$headers .= "X-Mailer: PHP/" . phpversion();
+// Build the email
+$email = (new Email())
+    ->from('test@test.nl')   // TODO update
+    ->to($to)
+    ->replyTo('test@test.nl') // TODO update
+    ->subject($email_subject)
+    ->text($email_body);
 
-// Send email (comment out if mail is not configured)
-// $mail_sent = @mail($to, $email_subject, $email_body, $headers);
+// Send it
+$mailer->send($email);
 
-// For local development, skip email and just save to file
 $mail_sent = true;
 
 if ($mail_sent) {
