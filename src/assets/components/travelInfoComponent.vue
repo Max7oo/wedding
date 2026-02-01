@@ -22,7 +22,7 @@
             >.
           </p>
           <p>
-            Please note the château is not well connected by public transport and is about a 1h40
+            Please note the Château is not well connected by public transport and is about a 1h40
             drive from the church. There is plenty of parking available at the end of the driveway.
           </p>
           <p>If you need help with transportation, please contact us.</p>
@@ -30,7 +30,7 @@
         <div>
           <b>Accommodation</b>
           <p>
-            We recommend booking accommodation near the château, as this is where the celebration
+            We recommend booking accommodation near the Château, as this is where the celebration
             will end. The nearby towns of La Motte and Le Muy (within a 15-minute drive) offer a
             wide range of options, from campsites to villas.
           </p>
@@ -100,7 +100,8 @@
   display: flex;
   gap: 2rem;
   margin-top: 4rem;
-  height: 700px;
+  height: 60vh;
+  max-height: 700px;
 }
 .images img:nth-child(1) {
   width: 40%;

@@ -4,67 +4,74 @@
     <div class="qaDiv">
       <div class="questions">
         <details open>
-          <summary>Can I give you a gift?</summary>
-          <p>
-            Many of you are traveling from far to celebrate with us, and your presence is truly the
-            greatest gift we could ask for. However, if you'd like to contribute to our wedding
-            registry or honeymoon fund, you can do so via the link below.
-          </p>
-        </details>
-        <details>
           <summary>Is there a dress code?</summary>
           <p>
-            There's no specific dress code. That said, the ceremony will take place in a church, so
-            we kindly ask for respectful attire. Late June in the South of France can be quite warm,
-            and most of the reception will be outdoors, so dress comfortably for summer weather.
-          </p>
-        </details>
-        <details>
-          <summary>How do I get back to my accommodation after the party?</summary>
-          <p>
-            We're working on arranging shuttle/taxi services from the château to nearby
-            accommodations. If you use this service, you'll be able to leave your car overnight and
-            pick it up the next day. Please keep this in mind when booking your stay — we can only
-            provide rides within a 15-minute radius, as the service will be shared among guests.
+            The dress code is Summer Chic. As the ceremony will take place in a church, we kindly
+            ask guests to dress respectfully (for example, with shoulders covered). Late June in the
+            South of France can be quite warm, and the reception will take place outdoors, so guests
+            are encouraged to choose attire that is both stylish and comfortable for summer weather.
           </p>
         </details>
         <details>
           <summary>Can I bring a plus-one?</summary>
           <p>
             Due to venue capacity, we've included all confirmed +1s and children on your invitation.
-            If you're unsure or have questions, feel free to reach out.
+            Guests with any questions or uncertainties are encouraged to reach out to us.
+          </p>
+        </details>
+        <details>
+          <summary>What time should I be where?</summary>
+          <p style="margin-bottom: 1rem">
+            As mentioned, guests are kindly asked to enter the church no later than 13:45 to ensure
+            a timely start to the ceremony. Please allow extra time for traffic and parking, as
+            these can be challenging in Monaco.
+          </p>
+          <p>
+            The reception at the Château will begin at 18:00. Following the ceremony, there will be
+            a break to allow for travel time. Parking will be available for all guests at the
+            Château. Drinks and appetizers will be served upon arrival.
+          </p>
+        </details>
+        <details>
+          <summary>Can I get a taxi to my accommodation after the celebration?</summary>
+          <p style="margin-bottom: 1rem">
+            To ensure all guests return safely after the celebration, we kindly advise against
+            driving if planning to drink. A shared taxi service will be arranged to transport guests
+            back to their accommodations. Guests wishing to use this service are invited to indicate
+            so on their RSVP.
+          </p>
+          <p>
+            When arranging accommodations, please note that the taxi service is available within a
+            15-minute radius, as it will be shared among guests. Those using the service are welcome
+            to leave their cars overnight and collect them the following day.
+          </p>
+        </details>
+        <details>
+          <summary>Can I give you a gift?</summary>
+          <p>
+            We are deeply grateful that so many guests are traveling from near and far to celebrate
+            with us, your presence is the greatest gift we could ask for. For those who wish to
+            contribute to our wedding registry or honeymoon fund, offerings may be placed in the
+            designated box at the reception or made online via this
+            <a href="" target="_blank">link</a>.
+          </p>
+        </details>
+
+        <details>
+          <summary>Would you like to help with entertainment?</summary>
+          <p>
+            If guests would like to contribute to the entertainment during the reception (such as
+            speeches or games), we would be delighted. Please reach out to our best man/maid of
+            honor team to coordinate: Niels V, Tim vd D, Tim vd V, Julie Q, Marie P or Vincent S.
           </p>
         </details>
         <details>
           <summary>What is there to do in the region?</summary>
           <p>
-            The area around La Motte and Le Muy offers beautiful vineyards, hiking, golf, charming
-            villages, and of course — plenty of sunshine! We're happy to share a few recommendations
-            if you're planning to explore.
-          </p>
-        </details>
-        <details>
-          <summary>What is there to do in the region?</summary>
-          <p>
-            The area around La Motte and Le Muy offers beautiful vineyards, hiking, golf, charming
-            villages, and of course — plenty of sunshine! We're happy to share a few recommendations
-            if you're planning to explore.
-          </p>
-        </details>
-        <details>
-          <summary>What is there to do in the region?</summary>
-          <p>
-            The area around La Motte and Le Muy offers beautiful vineyards, hiking, golf, charming
-            villages, and of course — plenty of sunshine! We're happy to share a few recommendations
-            if you're planning to explore.
-          </p>
-        </details>
-        <details>
-          <summary>What is there to do in the region?</summary>
-          <p>
-            The area around La Motte and Le Muy offers beautiful vineyards, hiking, golf, charming
-            villages, and of course — plenty of sunshine! We're happy to share a few recommendations
-            if you're planning to explore.
+            The region surrounding La Motte and Le Muy is filled with scenic vineyards, delightful
+            hiking trails, golf courses, charming villages, and, of course, abundant sunshine.
+            Guests planning to explore are encouraged invited to reach out for a few of our favorite
+            recommendations.
           </p>
         </details>
       </div>

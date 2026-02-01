@@ -30,3 +30,4 @@ coverage
 *.tsbuildinfo
 
 /vendor
+contact.php

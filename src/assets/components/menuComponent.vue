@@ -1,7 +1,7 @@
 <template>
   <div class="menuWrapper">
     <div class="menuDiv">
-      <p class="logo">Max & Julie</p>
+      <p class="logo">Wedding of Max & Julie</p>
 
       <!-- Hamburger -->
       <button class="burger" @click="isOpen = !isOpen">
@@ -28,8 +28,8 @@ const isOpen = ref(false)
 const items = ref([
   { label: 'When/Where', route: 'whenwhere' },
   { label: 'Travel info', route: 'travelInfo' },
-  { label: 'RSVP', route: 'rsvp' },
   { label: 'Q&A', route: 'qa' },
+  { label: 'RSVP', route: 'rsvp' },
 ])
 
 const scrollTo = (id: string) => {
@@ -56,6 +56,8 @@ const scrollTo = (id: string) => {
   width: 100%;
   background: #565c3e;
   z-index: 10;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
 }
 
 /* Centered content */

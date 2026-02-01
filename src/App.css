@@ -44,9 +44,18 @@ label {
   font-size: 1.5rem;
   font-weight: 600;
   color: #a0ba9f;
-  text-align: center;
 
   margin-right: 2rem;
+}
+
+/* Ensure selects match form typography and sizing */
+select {
+  font-family: 'EB Garamond', Arial, Helvetica, sans-serif;
+  font-size: 1.5rem;
+  color: inherit;
+  background-color: white;
+  padding: 0.4rem 0.6rem;
+  border: 2px solid #a0ba9f;
 }
 
 b,

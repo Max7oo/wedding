@@ -14,7 +14,7 @@
       <div class="whenwhereItemInfo">
         <a href="https://share.google/hDrG93R0BviF69Rl7" target="_blank">Château Des Demoiselles</a>
         <p>2040 Rte de Callas 83920 La Motte, France</p>
-        <p>From 17:00</p>
+        <p>From 18:00</p>
       </div>
     </div>
   </div>

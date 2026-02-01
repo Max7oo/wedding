@@ -64,7 +64,8 @@ const scrollTo = (id: string) => {
 .headerDiv {
   min-height: 100vh;
   width: 100%;
-  background-image: url('@/assets/winery.jpg');
+  background-image:
+    linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('@/assets/winery.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -75,13 +76,6 @@ const scrollTo = (id: string) => {
   align-items: center;
   gap: 2rem;
   padding: 2rem;
-}
-
-.headerDiv::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.5);
 }
 
 .headerDiv > * {
