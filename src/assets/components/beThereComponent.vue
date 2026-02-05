@@ -6,11 +6,11 @@
       single form may be submitted per household.
     </p>
 
-    <b v-if="successMessage" style="margin-bottom: 1rem">
+    <b v-if="successMessage" class="success-message">
       {{ successMessage }}
     </b>
 
-    <b v-if="errorMessage" style="margin-bottom: 1rem; color: red">
+    <b v-if="errorMessage" class="error-message">
       {{ errorMessage }}
     </b>
 
@@ -30,11 +30,13 @@
 
       <div class="formItem">
         <label for="name">Are you coming?</label>
-        <div class="radiobuttons">
-          <input type="radio" id="yes" name="rsvp" value="yes" required v-model="form.rsvp" />
-          <label for="yes">Yes</label>
-          <input type="radio" id="no" name="rsvp" value="no" required v-model="form.rsvp" />
-          <label for="no">No</label>
+        <div class="formItemRadio">
+          <div class="radiobuttons">
+            <input type="radio" id="yes" name="rsvp" value="yes" required v-model="form.rsvp" />
+            <label for="yes">Yes</label>
+            <input type="radio" id="no" name="rsvp" value="no" required v-model="form.rsvp" />
+            <label for="no">No</label>
+          </div>
         </div>
         <div v-if="errors.rsvp" class="error-message">{{ errors.rsvp }}</div>
       </div>
@@ -54,30 +56,28 @@
       </div>
 
       <!-- per-person name and allergy rows (first row is submitter) -->
-      <div class="formItem" v-if="isComing && amountSelected && amountNumber > 0">
+      <div class="formItem align-top" v-if="isComing && amountSelected && amountNumber > 0">
         <label>Names of people, please specify allergies and diets</label>
         <div class="names-list">
           <div v-for="(_, index) in guestSlots" :key="index" class="name-item">
-            <div v-if="index === 0">
-              <input
-                type="text"
-                :id="`guest-${index}`"
-                :name="`guest-${index}`"
-                placeholder="Your name"
-                v-model="form.name"
-                required
-              />
-            </div>
-            <div v-else>
-              <input
-                type="text"
-                :id="`guest-${index}`"
-                :name="`guest-${index}`"
-                :placeholder="`Guest ${index + 1} name`"
-                v-model="form.names[index]"
-                required
-              />
-            </div>
+            <input
+              v-if="index === 0"
+              type="text"
+              :id="`guest-${index}`"
+              :name="`guest-${index}`"
+              placeholder="Your name"
+              v-model="form.name"
+              required
+            />
+            <input
+              v-else
+              type="text"
+              :id="`guest-${index}`"
+              :name="`guest-${index}`"
+              :placeholder="`Guest ${index + 1} name`"
+              v-model="form.names[index]"
+              required
+            />
 
             <div class="guest-allergy-checkboxes">
               <label
@@ -229,39 +229,43 @@
         <label for="name"
           >Do you already know your travel details? (only if you need to travel far)</label
         >
-        <div class="radiobuttons">
-          <input type="radio" id="yes" name="travel" value="yes" required v-model="form.travel" />
-          <label for="yes">Yes</label>
-          <input type="radio" id="no" name="travel" value="no" required v-model="form.travel" />
-          <label for="no">No</label>
+        <div class="formItemRadio">
+          <div class="radiobuttons">
+            <input type="radio" id="yes" name="travel" value="yes" required v-model="form.travel" />
+            <label for="yes">Yes</label>
+            <input type="radio" id="no" name="travel" value="no" required v-model="form.travel" />
+            <label for="no">No</label>
+          </div>
         </div>
         <p v-if="errors.travel" class="error-message">{{ errors.travel }}</p>
       </div>
 
-      <div class="formItem" v-if="form.travel === 'yes'">
+      <div class="formItem" v-if="isComing && form.travel === 'yes'">
         <label for="arrivalDate">Arrival date</label>
         <input type="date" id="arrivalDate" name="arrivalDate" v-model="form.arrivalDate" />
         <p v-if="errors.arrivalDate" class="error-message">{{ errors.arrivalDate }}</p>
       </div>
 
-      <div class="formItem" v-if="form.travel === 'yes'">
+      <div class="formItem" v-if="isComing && form.travel === 'yes'">
         <label for="leavingDate">Leaving date</label>
         <input type="date" id="leavingDate" name="leavingDate" v-model="form.leavingDate" />
         <p v-if="errors.leavingDate" class="error-message">{{ errors.leavingDate }}</p>
       </div>
 
-      <div class="formItem" v-if="form.travel === 'yes'">
+      <div class="formItem" v-if="isComing && form.travel === 'yes'">
         <label>Will you have/use a car?</label>
-        <div class="radiobuttons">
-          <input type="radio" id="car-yes" name="car" value="yes" v-model="form.car" />
-          <label for="car-yes">Yes</label>
-          <input type="radio" id="car-no" name="car" value="no" v-model="form.car" />
-          <label for="car-no">No</label>
+        <div class="formItemRadio">
+          <div class="radiobuttons">
+            <input type="radio" id="car-yes" name="car" value="yes" v-model="form.car" />
+            <label for="car-yes">Yes</label>
+            <input type="radio" id="car-no" name="car" value="no" v-model="form.car" />
+            <label for="car-no">No</label>
+          </div>
         </div>
         <p v-if="errors.car" class="error-message">{{ errors.car }}</p>
       </div>
 
-      <div class="formItem" v-if="form.travel === 'yes'">
+      <div class="formItem" v-if="isComing && form.travel === 'yes'">
         <label for="lodging">Hotel/Airbnb name or adres</label>
         <input
           type="text"
@@ -275,11 +279,13 @@
 
       <div class="formItem" v-if="isComing">
         <label for="name">Would you like to make use of the taxi service?</label>
-        <div class="radiobuttons">
-          <input type="radio" id="yes" name="taxi" value="yes" required v-model="form.taxi" />
-          <label for="yes">Yes</label>
-          <input type="radio" id="no" name="taxi" value="no" required v-model="form.taxi" />
-          <label for="no">No</label>
+        <div class="formItemRadio">
+          <div class="radiobuttons">
+            <input type="radio" id="yes" name="taxi" value="yes" required v-model="form.taxi" />
+            <label for="yes">Yes</label>
+            <input type="radio" id="no" name="taxi" value="no" required v-model="form.taxi" />
+            <label for="no">No</label>
+          </div>
         </div>
         <p v-if="errors.taxi" class="error-message">{{ errors.taxi }}</p>
       </div>
@@ -639,14 +645,18 @@ onUnmounted(() => {
   display: flex;
   flex-direction: column;
   margin-bottom: 4rem;
+  width: 100%;
 }
 .form label {
-  width: 50%;
+  width: 25%;
+  margin-right: 0;
 }
 .formItem {
   display: flex;
   align-items: center;
+  justify-content: center;
   margin-bottom: 1rem;
+  gap: 1rem;
 }
 .formItem input,
 .formItem textarea,
@@ -655,23 +665,107 @@ onUnmounted(() => {
   font-size: 1.5rem;
 
   border: #a0ba9f 2px solid;
-  width: 50%;
+  width: 30%;
   background-color: white;
   padding: 0.4rem 0.6rem;
 }
 
+.names-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  width: 75%;
+}
+.name-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  border: #a0ba9f 2px dotted;
+}
+
+.name-item > div,
+.name-item input,
+.name-item select {
+  flex: 1;
+}
+
+.guest-allergy-checkboxes {
+  flex: 1;
+}
+
+.name-item select {
+  height: 100%;
+}
+.guest-allergy-checkboxes {
+  display: flex;
+  flex-direction: column;
+}
+.guest-allergy-checkboxes label {
+  width: 100%;
+}
+.guest-allergy-checkboxes input[type='checkbox'] {
+  max-width: 15px;
+}
+
+.formItemRadio {
+  width: 30%;
+}
 .radiobuttons {
   display: flex;
+}
+.radiobuttons input[type='radio'] {
+  max-width: 15px;
 }
 
 .form button {
   align-self: center;
 }
 
+.success-message {
+  color: green !important;
+  margin-bottom: 4rem;
+}
+.error-message {
+  color: red !important;
+}
+
+@media (max-width: 1150px) {
+  .names-list,
+  .formItem input,
+  .formItem textarea,
+  .formItem select,
+  .formItemRadio {
+    width: 50%;
+  }
+  .name-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .name-item input[type='text'],
+  .name-item select,
+  .guest-allergy-checkboxes {
+    width: 100%;
+  }
+}
+
 @media (max-width: 768px) {
   .formItem {
-    flex-direction: column;
     gap: 1rem;
+  }
+  .form label {
+    width: 40%;
+  }
+  .names-list,
+  .formItem input,
+  .formItem textarea,
+  .formItemRadio {
+    width: 60%;
+  }
+  .guest-allergy-checkboxes label {
+    width: auto;
+  }
+  .align-top {
+    align-items: flex-start;
   }
 }
 
@@ -680,10 +774,35 @@ onUnmounted(() => {
     padding: 2rem;
   }
 }
+@media (max-width: 481px) {
+  .formItem input,
+  .formItem textarea,
+  .formItem select {
+    font-size: 1.2rem;
+  }
+}
 
 @media (max-width: 379px) {
   .beThere {
     padding: 2rem 1rem;
+  }
+
+  .formItem {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .form label {
+    width: 100%;
+  }
+  .names-list,
+  .formItem input,
+  .formItem textarea,
+  .formItemRadio {
+    width: 100%;
+  }
+  .success-message {
+    margin-bottom: 6rem;
   }
 }
 </style>

@@ -63,8 +63,8 @@
     </div>
 
     <div class="images">
-      <img src="@/assets/together.jpg" alt="Max & Julie" />
-      <img src="@/assets/eglise.jpg" alt="Église Sainte-Dévote" />
+      <img src="@/assets/maxjulie1.jpeg" alt="Max & Julie" class="bw-filter" />
+      <img src="@/assets/eglise.jpg" alt="Max & Julie" />
     </div>
   </div>
 </template>
@@ -110,6 +110,12 @@
 .images img:nth-child(2) {
   width: 60%;
   object-fit: cover;
+}
+
+.bw-filter {
+  filter: grayscale(100%);
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
 }
 
 @media (max-width: 1000px) {

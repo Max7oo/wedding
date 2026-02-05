@@ -27,8 +27,8 @@
             these can be challenging in Monaco.
           </p>
           <p>
-            The reception at the Château will begin at 18:00. Following the ceremony, there will be
-            a break to allow for travel time. Parking will be available for all guests at the
+            Following the ceremony, there will be a break to allow for travel time. The reception at
+            the Château will begin at 18:00. Parking will be available for all guests at the
             Château. Drinks and appetizers will be served upon arrival.
           </p>
         </details>
@@ -52,8 +52,9 @@
             We are deeply grateful that so many guests are traveling from near and far to celebrate
             with us, your presence is the greatest gift we could ask for. For those who wish to
             contribute to our wedding registry or honeymoon fund, offerings may be placed in the
-            designated box at the reception or made online via this
-            <a href="" target="_blank">link</a>.
+            designated box at the reception, made online via
+            <a href="https://paypal.me/maxderuiter7" target="_blank">PayPal</a> or by direct bank
+            transfer (contact us for bank details).
           </p>
         </details>
 
@@ -111,6 +112,10 @@
 }
 .image img {
   width: 100%;
+}
+
+.bw-filter {
+  filter: grayscale(100%);
 }
 
 @media (max-width: 1100px) {
